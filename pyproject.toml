@@ -1,0 +1,30 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = ["setuptools>=61"]
+
+[project]
+authors = [{ name = "Reza Omidvar" }]
+version = "0.1.0"
+name = "news"
+readme = "README.md"
+description = "news"
+keywords = ["news"]
+requires-python = ">=3.8"
+
+[tool.setuptools.packages.find]
+include = ["news*"]
+exclude = ["tests*"]
+
+[tool.coverage.paths]
+source = ["news", "*/site-packages"]
+tests = ["tests", "*/tests"]
+
+[tool.coverage.run]
+branch = true
+source = ["news"]
+omit = ["*__init__*"]
+
+[tool.coverage.report]
+show_missing = true
+fail_under = 70
+

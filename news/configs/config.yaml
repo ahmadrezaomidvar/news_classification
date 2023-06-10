@@ -1,0 +1,8 @@
+# Configuration file for the training and prediction of the model
+
+test_size: 0.2                      # Size of the test set
+ngram_range: [1, 2]                 # Range of ngrams to use
+data_type: 'benchmark'              # Type of data to use: 'benchmark', 'undersample' or 'smote'
+max_len: 70                         # Maximum length of the input sequence
+weighted_loss: False                 # Whether to use weighted loss
+n_epochs: 100                       # Number of epochs to train
